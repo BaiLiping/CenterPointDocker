@@ -1,9 +1,6 @@
 FROM scrin/dev-spconv:latest
 
 RUN git clone https://github.com/BaiLiping/CenterPointDocker.git --recursive
-CMD cp /root/CenterPointDocker/sources.list /etc/apt
-RUN apt update
-RUN apt upgrade -y
 RUN apt install -y python3-pip
 RUN python3 -m pip install --upgrade pip
 RUN apt install -y libgl1-mesa-dev
