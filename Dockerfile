@@ -1,10 +1,10 @@
 FROM scrin/dev-spconv:latest
 
 RUN git clone https://github.com/BaiLiping/CenterPointDocker.git --recursive
-RUN cd /root/CenterPointDocker
+CMD /bin/sh -c 'cd /root/CenterPointDocker'
 RUN pwd
-RUN ls -a
-RUN cp sources.list /etc/apt
+RUN ls -a 
+CMD cp sources.list /etc/apt
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y python3-pip
