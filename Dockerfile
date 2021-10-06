@@ -1,10 +1,7 @@
 FROM scrin/dev-spconv:latest
 
 RUN git clone https://github.com/BaiLiping/CenterPointDocker.git --recursive
-CMD /bin/sh -c 'cd /root/CenterPointDocker'
-RUN pwd
-RUN ls -a 
-CMD cp sources.list /etc/apt
+CMD cp /root/CenterPointDocker/sources.list /etc/apt
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y python3-pip
@@ -14,9 +11,8 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN pip install opencv-python
 RUN pip install opencv-contrib-python
 RUN pip install nuscenes-devkit
-RUN cd NuScenes_Project/dependencies/Det3D
-RUN pip install -r requirements.txt
-RUN python3 setup.py build develop
+RUN pip install -r /root/CenterPointDocker/NuScenes_Project/dependencies/Det3Drequirements.txt
+RUN python3 /root/CenterPointDocker/NuScenes_Project/Det3D/setup.py build develop
 RUN cd ../apex
-RUN pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+RUN pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" /root/CenterPointDocker/NuScenes_Project/apex
 
