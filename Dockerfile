@@ -1,9 +1,8 @@
 FROM scrin/dev-spconv:latest
 
 RUN git clone https://github.com/BaiLiping/CenterPointDocker.git --recursive
-RUN rm /etc/apt/sources.list
-CMD cp /root/CenterPointDocker/sources.list /etc/apt
-RUN apt update
+RUN sudo echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse" > /etc/apt/sources.list
+RUN sudo apt update
 RUN apt upgrade -y
 RUN apt install -y python3-pip
 RUN python3 -m pip install --upgrade pip
