@@ -1,7 +1,7 @@
 FROM scrin/dev-spconv:latest
 
 RUN git clone https://github.com/BaiLiping/CenterPointDocker.git --recursive
-RUN cd CenterPointDocker
+RUN cd /root/CenterPointDocker
 RUN pwd
 RUN ls -a
 RUN cp sources.list /etc/apt
