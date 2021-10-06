@@ -4,3 +4,6 @@
 [submodule "NuScenes_Project/Det3D"]
 	path = NuScenes_Project/Det3D
 	url = https://github.com/poodarchu/Det3D.git
+[submodule "NuScenes_Project/CenterPoint"]
+	path = NuScenes_Project/CenterPoint
+	url = https://github.com/tianweiy/CenterPoint.git
