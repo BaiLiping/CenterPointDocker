@@ -11,8 +11,29 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN pip install opencv-python
 RUN pip install opencv-contrib-python
 RUN pip install nuscenes-devkit
-RUN pip install -r /root/CenterPointDocker/NuScenes_Project/dependencies/Det3Drequirements.txt
-RUN python3 /root/CenterPointDocker/NuScenes_Project/Det3D/setup.py build develop
-RUN cd ../apex
-RUN pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" /root/CenterPointDocker/NuScenes_Project/apex
-
+RUN pip install cxxfilt>=0.2.0
+RUN pip install tqdm>=4.28.1
+RUN pip install numpy>=1.15.3
+RUN pip install PyYAML>=5.1
+RUN pip install scikit-image                                                                                              
+RUN pip install scipy                                                                                                     
+RUN pip install numba                                                                                                     
+RUN pip install pillow                                                                                                    
+RUN pip install matplotlib                                                                                                
+RUN pip install fire                                                                                                      
+RUN pip install tensorboardX                                                                                              
+RUN pip install protobuf                                                                                                  
+RUN pip install opencv-python                                                                                             
+RUN pip install opencv-contrib-python                                                                                     
+RUN pip install pybind11                                                                                                  
+RUN pip install vtk                                                                                                       
+RUN pip install joblib                                                                                                    
+RUN pip install easydict                                                                                                  
+RUN pip install open3d-python                                                                                             
+RUN pip install terminaltables                                                                                            
+RUN pip install pytest-runner                                                                                             
+RUN pip install addict                                                                                                    
+RUN pip install pycocotools                                                                                               
+RUN pip install imagecorruptions                                                                                          
+RUN pip install objgraph                                                                                                  
+RUN pip install lyft_dataset_sdk
