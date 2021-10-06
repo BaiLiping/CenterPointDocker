@@ -1,0 +1,6 @@
+[submodule "NuScenes_Project/apex"]
+	path = NuScenes_Project/apex
+	url = https://github.com/NVIDIA/apex
+[submodule "NuScenes_Project/Det3D"]
+	path = NuScenes_Project/Det3D
+	url = https://github.com/poodarchu/Det3D.git
